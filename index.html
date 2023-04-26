@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sorteie um Vereador para Atendimento</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		h1 {
+			margin-top: 50px;
+		}
+		img {
+			max-width: 300px;
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Sorteie um Vereador para Atendimento</h1>
+	<button onclick="sortearVereador()">Sortear Vereador</button>
+	<div id="resultado"></div>
+
+	<script>
+		function sortearVereador() {
+			// Lista com os vereadores
+			var vereadores = [
+				{nome: "André Rebello", foto: "andre_rebello.webp"},
+				{nome: "Azuaite Martins de França", foto: "azuaite_martins_de_franca.webp"},
+				{nome: "Bruno Zancheta", foto: "bruno_zancheta.webp"},
+				{nome: "Cidinha do Oncológico", foto: "cidinha_do_oncologico.webp"},
+				{nome: "Dé Alvim", foto: "de_alvim.webp"},
+				{nome: "Dimitri Sean", foto: "dimitri_sean.webp"},
+				{nome: "Djalma Nery", foto: "djalma_nery.webp"},
+				{nome: "Elton Carvalho", foto: "elton_carvalho.webp "},
+				{nome: "Fabio Zanchin", foto: "fabio_zanchin.webp"},
+				{nome: "Gustavo Pozzi", foto: "gustavo_pozzi.webp"},
+				{nome: "Laíde das Graças Simões", foto: "laide_das_gracas_simoes.webp"},
+				{nome: "Lucão Fernandes", foto: "lucao_fernandes.webp"},
+				{nome: "MALABIM", foto: "malabim.webp"},
+				{nome: "Marquinho Amaral", foto: "marquinho_amaral.webp"},
+				{nome: "Moisés Lazarine", foto: "moises_lazarine.webp"},
+				{nome: "Professora Neusa", foto: "professora_neusa.webp"},
+				{nome: "Raquel Auxiliadora", foto: "raquel_auxiliadora.webp"},
+				{nome: "Robertinho Mori", foto: "robertinho_mori.webp"},
+				{nome: "Sérgio Alves Rocha", foto: "sergio_alves_rocha.webp"},
+				{nome: "Tiago Orlandi Parelli", foto: "tiago_orlandi_parelli.webp"},
+				{nome: "Ubirajara Teixeira", foto: "ubirajara_teixeira.webp"}
+			];
+
+			// Seleciona um vereador aleatoriamente
+			var index = Math.floor(Math.random() * vereadores.length);
+			var vereador = vereadores[index];
+
+			// Exibe o resultado
+			document.getElementById("resultado").innerHTML = "<h2>" + vereador.nome + "</h2><img src='" + vereador.foto + "'>";
+		}
+	</script>
+</body>
+</html>
